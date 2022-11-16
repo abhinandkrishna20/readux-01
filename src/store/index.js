@@ -1,8 +1,9 @@
-import {createStore} from 'react-redux';
+import { createStoreHook } from "react-redux";
 
-const reduceFun = (state,actions) ={
+const reduceFun = (state = {counter: 0},actions) =>{
+return state;
+}
 
-}
-const createStore =() =>{
-    
-}
+
+const store = createStoreHook(reduceFun);
+export default store;
